@@ -4,6 +4,7 @@
 
 import { TodoList } from './todo.js';
 import { loadTodos, saveTodos } from './storage.js';
+import { initSearch } from './search.js';
 
 const list = new TodoList(loadTodos());
 let currentFilter = 'all';
@@ -101,6 +102,8 @@ export function init() {
   for (const button of document.querySelectorAll('[data-filter]')) {
     button.addEventListener('click', () => setFilter(button.dataset.filter));
   }
+
+  initSearch(() => list.todos);
 
   renderTodos();
 }
