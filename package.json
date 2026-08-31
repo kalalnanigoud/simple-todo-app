@@ -1,0 +1,17 @@
+{
+  "name": "simple-todo-app",
+  "version": "1.0.0",
+  "description": "A small browser todo application",
+  "type": "module",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "vitest run",
+    "lint": "eslint src tests"
+  },
+  "keywords": ["todo", "vanilla-js"],
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^9.0.0",
+    "vitest": "^1.0.0"
+  }
+}
